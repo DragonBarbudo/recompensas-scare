@@ -1,9 +1,9 @@
 *{ margin: 0; padding: 0; }
 :root{
-  --colMain : #426BA4;
-  --colSec  : #1AABD4;
-  --colLight: #BCD4ED;
-  --colB : #0F205E;
+  --colMain : #B4A267;
+  --colSec  : #9A832B;
+  --colLight: #D8D1B3;
+  --colB : #393939;
   --colW    : #f5f5f5;
   --bluemx  : #8DB8E6;
 }

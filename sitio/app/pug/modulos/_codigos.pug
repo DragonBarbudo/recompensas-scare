@@ -4,15 +4,10 @@ section#socios-participantes
       .col-md-6.col-sm-12.text-center: h2 Socios Participantes
   .container
     .row
-      - var cods = ['Tarjetas Regalo', 'Hogar', 'Electrónica', 'Belleza', 'Cómputo', 'Experiencias']
-      -for(var i = 1; i<19; i++)
-        .col-md-2.col-sm-4
+      - var cods = ['Hogar', 'Herramientas', 'Recargas telefónicas', 'Electrónica', 'Cómputo', 'Uniformes', 'Libros', 'Cursos']
+      -for(var i = 0; i<cods.length; i++)
+        .col-md-3.col-sm-6
           .card.mt-5
             img(src="app/img/canje-"+i+".jpg").card-img-top
-            //.card-body.text-center
-              a(href="#").btn.btn-large.btn-primary Canjear
-              
-      //.col-md-4.col-sm-6
-        .card.mt-5
-          img(src="app/img/canje-"+i+".jpg").card-img-top
-            
+            .card-body.text-center
+              a(href="#").btn.btn-large.btn-primary=cods[i]
