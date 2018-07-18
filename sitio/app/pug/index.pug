@@ -1,0 +1,25 @@
+include _app
+
+doctype html
+html(lang="es")
+  +head
+  
+
+body(data-spy="scroll" data-target=".navbar" data-offset="80")
+
+  +navi(false)
+  
+  include modulos/_banner
+  include modulos/_login2.pug
+  //include modulos/_mi-cuenta
+  include modulos/_que-es
+  //include modulos/_como-funciona
+  include modulos/_registro
+  include modulos/_codigos
+  //include modulos/_login.pug
+  //include modulos/_promociones.pug
+  include modulos/_contacto
+
+  +footer
+  +scripts
+  

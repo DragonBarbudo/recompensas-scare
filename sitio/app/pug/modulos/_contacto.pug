@@ -1,0 +1,15 @@
+section#contacto
+  .container
+    .row.justify-content-center
+      .col-md-6.col-sm-12.text-center: h2 Contacto
+    .row
+      .col-md-6.col-sm-12
+        p #[strong #{title}] está comprometido a servirte de una manera eficiente, por lo que te pedimos llenes la forma de contacto y envíanos tu duda, sugerencia o queja.
+        p Si lo prefieres también nos puedes contactar a través de nuestro correo electrónico info@#{url}
+      .col-md-6.col-sm-12
+        form
+          input(placeholder="Nombre").form-control
+          input(placeholder="Correo electrónico").form-control
+          input(placeholder="Teléfono").form-control
+          textarea(placeholder="Mensaje").form-control
+          button(type="submit").btn.btn-large.btn-block.btn-primary Enviar

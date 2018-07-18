@@ -1,0 +1,18 @@
+section#socios-participantes
+  .container
+    .row.justify-content-center
+      .col-md-6.col-sm-12.text-center: h2 Socios Participantes
+  .container
+    .row
+      - var cods = ['Tarjetas Regalo', 'Hogar', 'Electrónica', 'Belleza', 'Cómputo', 'Experiencias']
+      -for(var i = 1; i<19; i++)
+        .col-md-2.col-sm-4
+          .card.mt-5
+            img(src="app/img/canje-"+i+".jpg").card-img-top
+            //.card-body.text-center
+              a(href="#").btn.btn-large.btn-primary Canjear
+              
+      //.col-md-4.col-sm-6
+        .card.mt-5
+          img(src="app/img/canje-"+i+".jpg").card-img-top
+            

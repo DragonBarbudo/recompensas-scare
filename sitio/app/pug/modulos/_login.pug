@@ -1,0 +1,36 @@
+section#referidos
+  .container
+    .row.justify-content-center
+      .col-md-6.col-sm-12.text-center
+        h2 Referidos
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi labore temporibus ratione, repellat optio aliquam error quod, itaque officia deleniti modi dicta fugit nemo unde, quaerat doloribus non. Nihil, tempore.
+
+    .row
+      .col-md-10.offset-md-1
+        form(action="referenciado.html").loginform
+          .row
+            .col-4: +inputText("Usuario")
+            .col-4: +inputText("Contraseña", "password")
+            .col-3.offset-1: button.btn.btn-secondary.btn-block(type="submit") Ingresar
+
+
+
+
+//header.container-fluid
+  .row
+    .col-md-6.offset-md-3.col-sm-12.loginlogo
+      img(src="app/img/logotipo.png")
+    .col
+  .row
+    .col-md-6.offset-md-3.offset-sm-1.col-sm-10
+      form(action="acceso.html").loginform
+        h2 Iniciar sesión
+        label Usuario:
+          input.form-control(placeholder="Ingrese su usuario")
+        label Contraseña:
+          input.form-control(placeholder="Ingrese su contraseña" type="password")
+        .checkbox
+          label
+            input(type="checkbox")
+            |  Recordarme
+        button.btn.bnt-lg.btn-secondary.btn-block(type="submit") Ingresar

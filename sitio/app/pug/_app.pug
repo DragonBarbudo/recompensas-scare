@@ -1,0 +1,132 @@
+- var title = "Recompensas Cádiz Centro"
+- var description = "Recompensas Cádiz Centro"
+- var url = "recompensas-cadizcentro.com"
+
+- function slugify(text){ return text.toString().toLowerCase().replace('é','e').replace('ó', 'o').replace('á','a').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, ''); }
+
+mixin head
+  head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  title=title
+  meta(name="description" content=description)
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+  link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+  link(rel="stylesheet", href="app/app.css")
+  
+  link(rel="icon" type="image/x-icon" href="favicon.ico")
+  link(rel="icon" type="image/png" href="favicon.png")
+  if block
+    block
+
+
+mixin scripts
+  script(src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+  script.
+    $(document).ready(function(){
+      $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
+        scroller($(this.hash));
+      });
+    });
+    function scroller(hash){
+        var target = hash;
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top-70
+          }, 1000);
+          return false;
+        }
+    }
+
+
+mixin inputText(lb, typevar, pholder)
+  - if (pholder==null)
+    - pholder = lb
+  .form-group.row
+    label.col-form-label.col-5.text-right !{lb}
+    input.form-control.col-7(type=typevar, placeholder=pholder)
+    
+mixin inputOptions(lb, ...items)
+  - var nmb = Math.floor(Math.random() * 100);
+  .form-group.row
+    label.col-form-label.col-5.text-right
+      div !{lb}
+      
+    .col-7
+      each item in items
+        .form-check.form-check-inline: label
+          input.form-check-input(type="radio" name="eval"+nmb)
+          span=item
+
+mixin inputCheckboxes(lb, ...items)
+  - var nmb = Math.floor(Math.random() * 100);
+  .form-group.row
+    label.col-form-label.col-5.text-right
+      div !{lb}
+      
+    .col-7
+      each item in items
+        .form-check.form-check-inline: label
+          input.form-check-input(type="checkbox" name="eval"+item)
+          span=item
+
+mixin inputSelect(lb, ...items)
+  - var nmb = Math.floor(Math.random() * 100);
+  .form-group.row
+    label.col-form-label.col-5.text-right
+      div !{lb}
+    
+    select.form-control.col-7
+      each item in items
+        option=item
+
+mixin catalogo(txt, img)
+  .card
+    img(src=img).card-img-top
+    .card-body
+      h4.card-title=txt
+      .card-text: p Consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+      .text-right: a(href="#").btn.btn-secondary Canjear
+      
+      
+mixin navi(inside)
+  nav.navbar.bg-light.navbar-expand-xl.fixed-top
+    .container
+      a.navbar-brand(href="#banner").smooth-scroll: img(src="app/img/logotipo.png")
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#mainNav")
+        span.fa.fa-bars
+      .collapse.navbar-collapse#mainNav.justify-content-end
+        ul.navbar-nav
+          - var secciones = ['¿Qué es?', 'Registro de datos', 'Socios Participantes', 'Contacto']
+          if(!inside)
+            li.nav-item: a(href="index.html#mi-cuenta").nav-link.smooth-scroll Mi Cuenta
+          
+          each sec in secciones
+              li.nav-item: a(href="index.html#"+slugify(sec)).nav-link.smooth-scroll=sec
+          if(inside)
+            li.nav-item: a(href="index.html").nav-link.smooth-scroll Cerrar sesión
+        
+  
+mixin footer
+  .section: .text-center: a(href="https://www.cadizcentrocomercial.com/" target="_blank"): img(src="app/img/cadiz-centro.png")
+  footer
+    .container
+      .text-right: img(src="app/img/powered-by-blue.png")
+    .footer-nav: .container
+      .row.text-center
+        .col
+          a(href="#") Términos y Condiciones
+          | | 
+          a(href="#") Preguntas Frecuentes
+          | | 
+          a(href="#") Aviso de Privacidad
+          | | 
+          a(href="#") info@#{url}
+    .bluemx
+      .text-center
+        a(href="http://www.bluepureloyalty.com/" target="_blank")
+          img(src="app/img/bluemx.png")
+          div blue.mx

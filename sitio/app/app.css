@@ -1,0 +1,193 @@
+*{ margin: 0; padding: 0; }
+:root{
+  --colMain : #426BA4;
+  --colSec  : #1AABD4;
+  --colLight: #BCD4ED;
+  --colB : #0F205E;
+  --colW    : #f5f5f5;
+  --bluemx  : #8DB8E6;
+}
+body{
+  background: var(--colW);
+}
+
+.loginlogo{
+  text-align: center;
+  padding: 40px 0;
+}
+.loginlogo img{
+  max-width: 280px;
+}
+
+.loginform{
+  background: #fff;
+  padding: 40px;
+
+}
+.loginform h2{
+  padding-bottom: 10px;
+  color: var(--colMain);
+  border-bottom: 1px solid var(--colMain);
+}
+.loginform label{
+  display: block;
+  padding: 10px;
+}
+
+
+.btn-primary{background:var(--colMain);}
+
+.btn-secondary{background:var(--colSec);}
+
+.navbar-brand img{
+  max-height: 40px;
+}
+.fa-bars{
+  color:var(--colMain);
+}
+
+.navbar-collapse{
+  text-align: center;
+}
+
+/*########## ACCESO #####*/
+
+.navbar-nav .nav-link{
+  color:var(--colB);
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  font-size: 0.8em;
+}
+.navbar-nav .nav-link::before{
+    content:"";
+    width: 100%;
+    position: absolute; left: 0; top: 0;
+    border-top: 0px solid var(--colMain);
+    transition: all .5s;
+  }
+.navbar-nav .nav-link.active{
+  color:var(--colMain);
+}
+.navbar-nav .nav-link.active::before{
+  border-top: 2px solid var(--colMain);
+  transition: all .5s;
+}
+
+
+section{
+  margin-top: 70px;
+  margin-bottom: 200px;
+}
+
+h2{
+  color:var(--colMain);
+  font-size: 2em;
+  padding: 40px 0;
+  border-bottom: 2px solid var(--colSec);
+  margin-bottom: 40px;
+}
+
+p{
+  margin: 20px 0;
+}
+
+
+.elreto{
+  background: var(--colMain);
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  padding: 40px 20px;
+}
+.elreto p{
+  color:var(--colW);
+}
+.elreto .gana{
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+form small{
+  display: block;
+}
+form label{
+  font-weight: bold;
+  font-size: 0.9em;
+}
+form .form-check{
+  font-size: 0.8em;
+}
+form .form-check label{
+  font-weight: normal;
+}
+
+ #contacto input, #contacto textarea, #contacto button{
+  margin-top: 10px;
+}
+
+
+
+footer .footer-nav{
+  background: var(--colMain);
+  color: var(--colSec);
+}
+footer .footer-nav a{
+  display: inline-block;
+  color: var(--colW);
+  font-size: 0.7em;
+  margin: 10px;
+}
+
+
+.bluemx{
+  background: var(--bluemx);
+  font-size: 0.7em;
+  line-height: 0.8em;
+  padding-bottom: 5px;
+}
+.bluemx a{
+  color:#101E40;
+}
+
+
+
+
+
+.nav-tabs .nav-item.nav-link{
+  color: var(--colMain);
+}
+.nav-tabs .nav-item.nav-link.active{
+  background: var(--colMain);
+  color:#fff;
+}
+
+#nav-datos{
+  margin-top: 40px;
+}
+#nav-datos .form-control-plaintext{
+  font-weight: bold;
+}
+#nav-datos button{
+  margin-top: 20px;
+  width: 200px;
+}
+#nav-datos small{display: block; opacity: 0.6;}
+
+
+
+
+#promociones{ cursor: pointer; }
+#actividades{ display: none; }
+
+
+
+.tusaldo{
+  color: var(--colMain);
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.tableimg img{
+  width: 80px;
+}

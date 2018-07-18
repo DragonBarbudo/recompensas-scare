@@ -1,0 +1,38 @@
+section#registro-de-datos
+  .container
+    .row.justify-content-center
+        .col-md-6.col-sm-12.text-center: h2 Registro de datos
+    .row.justify-content-center
+        .col.col-md-8.col-sm-12.text-center
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+    .row.justify-content-center
+        .col
+          hr
+          form
+            +inputText("Número DNI/INE")
+            //+inputText("Código de invitación <small>Si un amigo te invitó a suscribirte a Recompensas Coninsa, ingresa el código aquí y ¡recibe un bono de 50 Puntos Coninsa!</small>", "text", "Código")
+            +inputText("Nombre")
+            +inputText("Primer Apellido")
+            +inputText("Segundo Apellido")
+            +inputOptions("Género", "Femenino", "Masculino")
+            +inputText("Fecha de nacimiento", "date")
+            +inputText("Correo electrónico")
+            +inputText("Confirmar Correo Electrónico")
+            +inputText("Número de Teléfono", "tel", "(Clave LD) + Teléfono")
+            +inputText("Dirección")
+            +inputText("Código Postal")
+            +inputText("Contraseña <small>La contraseña debe ser mínimo de 6 caracteres, puede incluir mayúsculas, minúsculas, números y caracteres especiales.</small>", "password", "Ingrese una contraseña")
+            +inputText("Confirmar contraseña", "password", "Confirme la contraseña ingresada")
+            .form-group.row
+                .col.text-center
+                    label
+                        input(type="checkbox")
+                        span  Acepto Términos y Condiciones.
+                    
+                    label
+                        input(type="checkbox")
+                        span  Estoy de acuerdo con la Política de Privacidad.
+            
+            .form-group.row
+                .col.text-center: button(type="submit").btn.btn-large.btn-primary Registro
+            
