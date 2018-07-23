@@ -1,13 +1,13 @@
-section#socios-participantes
+section#catalogo-de-canje
   .container
     .row.justify-content-center
-      .col-md-6.col-sm-12.text-center: h2 Socios Participantes
+      .col-md-6.col-sm-12.text-center: h2 Catálogo de Canje
   .container
     .row
-      - var cods = ['Hogar', 'Herramientas', 'Recargas telefónicas', 'Electrónica', 'Cómputo', 'Uniformes', 'Libros', 'Cursos']
+      - var cods = ['Hogar', 'Herramientas', 'Recargas Telefónicas', 'Electrónica', 'Cómputo', 'Uniformes', 'Libros', 'Cursos y Talleres']
       -for(var i = 0; i<cods.length; i++)
         .col-md-3.col-sm-6
           .card.mt-5
-            img(src="app/img/canje-"+i+".jpg").card-img-top
+            img(src="app/img/canje-"+(i+1)+".jpg").card-img-top
             .card-body.text-center
               a(href="#").btn.btn-large.btn-primary=cods[i]

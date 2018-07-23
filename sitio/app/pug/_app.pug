@@ -100,12 +100,13 @@ mixin navi(inside)
         span.fa.fa-bars
       .collapse.navbar-collapse#mainNav.justify-content-end
         ul.navbar-nav
-          - var secciones = ['¿Qué es?', 'Registro de datos', 'Socios Participantes', 'Contacto']
-          if(!inside)
-            li.nav-item: a(href="index.html#mi-cuenta").nav-link.smooth-scroll Mi Cuenta
+          - var secciones = ['¿Qué es?', 'Catálogo de Canje', 'Promociones', 'Contacto']
+          
           
           each sec in secciones
               li.nav-item: a(href="index.html#"+slugify(sec)).nav-link.smooth-scroll=sec
+          if(!inside)
+            li.nav-item: a(href="index.html#mi-cuenta").nav-link.smooth-scroll Iniciar sesión
           if(inside)
             li.nav-item: a(href="index.html").nav-link.smooth-scroll Cerrar sesión
         

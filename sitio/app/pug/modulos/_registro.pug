@@ -1,4 +1,4 @@
-section#registro-de-datos
+section#registro
   .container
     .row.justify-content-center
         .col-md-6.col-sm-12.text-center: h2 Registro de datos
@@ -9,7 +9,7 @@ section#registro-de-datos
         .col
           hr
           form
-            +inputText("Número DNI/INE")
+            +inputText("Cédula NIT")
             //+inputText("Código de invitación <small>Si un amigo te invitó a suscribirte a Recompensas Coninsa, ingresa el código aquí y ¡recibe un bono de 50 Puntos Coninsa!</small>", "text", "Código")
             +inputText("Nombre")
             +inputText("Primer Apellido")
@@ -28,7 +28,6 @@ section#registro-de-datos
                     label
                         input(type="checkbox")
                         span  Acepto Términos y Condiciones.
-                    
                     label
                         input(type="checkbox")
                         span  Estoy de acuerdo con la Política de Privacidad.

@@ -27,6 +27,8 @@ body(data-spy="scroll" data-target=".navbar" data-offset="80")
             div(role="tabpanel").tab-pane#nav-personales.active
               .row: .col-md-8.offset-md-2
                 form.mt-5
+                  +inputText("Cédula NIT")
+                  //+inputText("Código de invitación <small>Si un amigo te invitó a suscribirte a Recompensas Coninsa, ingresa el código aquí y ¡recibe un bono de 50 Puntos Coninsa!</small>", "text", "Código")
                   +inputText("Nombre")
                   +inputText("Primer Apellido")
                   +inputText("Segundo Apellido")
@@ -37,6 +39,7 @@ body(data-spy="scroll" data-target=".navbar" data-offset="80")
                   +inputText("Número de Teléfono", "tel", "(Clave LD) + Teléfono")
                   +inputText("Dirección")
                   +inputText("Código Postal")
+                  
                   .text-center.mt-2: button(type="submit").btn.btn-large.btn-primary Editar
 
             div(role="tabpanel").tab-pane#nav-estado
